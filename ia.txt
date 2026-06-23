@@ -4,12 +4,19 @@ Resultado: Creo la base del proyecto sin problemas en el visual.
 Utilidad: Muy buena y rapida.
 
 Etapa 2:
-Le pedi que muestre la informacion de forma visual y ordenada mostrando un color segun el estado de la etiqueta.
+-Le pedi que muestre la informacion ya sea titulo, editoral, etc.  de forma visual y ordenada mostrando un color segun el estado de la etiqueta.
+Promps: En componente recibe por porops titulo, editorial, anio, estado, resumen, autores. Necesito que se muestre la informacion de forma visual y ordenada aplicando un estilo diferenciado segun el estado.
 Resultado: Creo de forma visual y ordenada los libros en mi proyecto, agregando tambien el color segun el estado del libro agregando los tipos de props con proptypes para evitar errores.
 Utilidad: No tuvo problema en hacerlo y agrego una buena forma visual al proyecto.
 
 Etapa 3
-Yo cree en la carpeta el archivo ListaLibros.jsx y le pedi a la ia que reciba el array de los libros y que renderize la lista de libros pasandole los datos importados.
+-Yo cree en la carpeta el archivo ListaLibros.jsx y le pedi a la ia que reciba el array de los libros y que renderize la lista de libros pasandole los datos importados.
+promps: Quiero que en ListaLibros reciba el array de libros por props.
+que el array con .map() y renderiza un LibroCard por cada libro
 Resultado: Hizo el array correspondiende con el .map, renderizando tambien un libro de LibroCard.
 Utilidad: Eficiente y buena
 
+Etapa 4
+-En esta etapa le pedi a la ia que agregara los botnes o un selector para poder filtrar los libros por el estado.
+promps:En FiltroEstado.jsx crea botones o un selector para poder filtrar por el estado, "Todos", "Disponible", "Prestado", "Reservado".
+Resultado:  

@@ -1,9 +1,23 @@
 import { useState } from 'react';
 import { libros } from './data/libros.js';
-import LibroCard from './components/LibroCard.jsx';
+import ListaLibros from './components/ListaLibros.jsx';
+import FiltroEstado from './components/FiltroEstado.jsx';
 
 function App() {
   const [books] = useState(libros);
+  const [filterEstado, setFilterEstado] = useState('');
+  const [searchTitle, setSearchTitle] = useState('');
+
+  const filteredBooks = books.filter((b) => {
+    const estado = (b.estado || b.status || 'Disponible').toLowerCase();
+    const titulo = (b.titulo || b.title || '').toLowerCase();
+    const matchedEstado =
+      !filterEstado || filterEstado === 'Todos'
+        ? true
+        : estado === filterEstado.toLowerCase();
+    const matchedSearch = titulo.includes(searchTitle.toLowerCase());
+    return matchedEstado && matchedSearch;
+  });
 
   console.log('books array:', books);
 
@@ -14,31 +28,17 @@ function App() {
         <p>Catálogo digital para libros y recursos.</p>
       </header>
       <main>
-        <section>
-          <h2>Libros disponibles</h2>
-          <div className="book-list">
-            {books.map((b) => {
-              const titulo = b.titulo || b.title || 'Sin título';
-              const editorial = b.editorial || b.publisher || '';
-              const anio = b.anio || b.year || '';
-              const estado = b.estado || b.status || 'Disponible';
-              const resumen = b.resumen || b.summary || '';
-              const autores = b.autores || (b.author ? [b.author] : []);
-
-              return (
-                <LibroCard
-                  key={b.id ?? titulo}
-                  titulo={titulo}
-                  editorial={editorial}
-                  anio={anio}
-                  estado={estado}
-                  resumen={resumen}
-                  autores={autores}
-                />
-              );
-            })}
-          </div>
-        </section>
+        <FiltroEstado
+          value={filterEstado}
+          onEstadoChange={setFilterEstado}
+          searchValue={searchTitle}
+          onSearchChange={setSearchTitle}
+        />
+        {filteredBooks.length > 0 ? (
+          <ListaLibros books={filteredBooks} />
+        ) : (
+          <p>No hay libros que coincidan</p>
+        )}
       </main>
     </div>
   );
