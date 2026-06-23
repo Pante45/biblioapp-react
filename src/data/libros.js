@@ -1,7 +1,3 @@
-// Datos precargados — V2 BiblioApp
-// Programación Front End (TI3031) — Evaluación Sumativa Unidad 3
-// estado: "Disponible" | "Prestado" | "Reservado"
-
 export const libros = [
   { id: 1,  titulo: "Cien Años de Soledad",        autores: ["Gabriel García Márquez"],            editorial: "Sudamericana",   anio: 1967, estado: "Disponible", resumen: "La saga de la familia Buendía en el pueblo de Macondo.",          esNovedad: false },
   { id: 2,  titulo: "El Nombre del Viento",         autores: ["Patrick Rothfuss"],                  editorial: "Plaza & Janés",  anio: 2007, estado: "Prestado",   resumen: "Kvothe relata su vida desde la infancia hasta convertirse en leyenda.", esNovedad: false },

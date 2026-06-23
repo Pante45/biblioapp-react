@@ -14,3 +14,64 @@ body {
 header h1 {
   margin-bottom: 8px;
 }
+
+/* Book list and card styles */
+.book-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.book-card {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(16,24,40,0.03);
+}
+
+.book-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.book-title {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.book-meta {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #374151;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.book-summary {
+  margin-top: 12px;
+  color: #4b5563;
+}
+
+.status-badge {
+  padding: 6px 10px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  color: white;
+}
+
+.status-disponible {
+  background: #10b981; /* green */
+}
+.status-prestado {
+  background: #ef4444; /* red */
+}
+.status-reservado {
+  background: #f59e0b; /* amber */
+}
+.status-unknown {
+  background: #6b7280; /* gray */
+}
