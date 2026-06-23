@@ -14,6 +14,7 @@ function ListaLibros({ books = [] }) {
 					const estado = b.estado || b.status || 'Disponible';
 					const resumen = b.resumen || b.summary || '';
 					const autores = b.autores || (b.author ? [b.author] : []);
+					const esNovedad = b.esNovedad || false;
 
 					return (
 						<LibroCard
@@ -24,6 +25,7 @@ function ListaLibros({ books = [] }) {
 							estado={estado}
 							resumen={resumen}
 							autores={autores}
+							esNovedad={esNovedad}
 						/>
 					);
 				})}

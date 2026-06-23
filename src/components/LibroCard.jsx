@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function LibroCard({ titulo, editorial, anio, estado, resumen, autores = [] }) {
+function LibroCard({ titulo, editorial, anio, estado, resumen, autores = [], esNovedad = false }) {
   const statusClass = (estado) => {
     if (!estado) return 'status-unknown';
     const key = estado.toLowerCase();
@@ -12,9 +12,12 @@ function LibroCard({ titulo, editorial, anio, estado, resumen, autores = [] }) {
   };
 
   return (
-    <article className="book-card">
+    <article className={`book-card ${esNovedad ? 'book-card-novedad' : ''}`}>
       <header className="book-header">
-        <h3 className="book-title">{titulo}</h3>
+        <div>
+          <h3 className="book-title">{titulo}</h3>
+          {esNovedad && <span className="novedad-badge">Novedad</span>}
+        </div>
         <span className={`status-badge ${statusClass(estado)}`}>{estado}</span>
       </header>
 
@@ -39,7 +42,8 @@ LibroCard.propTypes = {
   anio: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   estado: PropTypes.string,
   resumen: PropTypes.string,
-  autores: PropTypes.arrayOf(PropTypes.string)
+  autores: PropTypes.arrayOf(PropTypes.string),
+  esNovedad: PropTypes.bool
 };
 
 LibroCard.defaultProps = {
@@ -48,5 +52,6 @@ LibroCard.defaultProps = {
   anio: '',
   estado: 'Disponible',
   resumen: '',
-  autores: []
+  autores: [],
+  esNovedad: false
 };

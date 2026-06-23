@@ -75,3 +75,26 @@ header h1 {
 .status-unknown {
   background: #6b7280; /* gray */
 }
+
+.book-card-novedad {
+  border: 1px solid #2563eb;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.12);
+}
+
+.novedad-badge {
+  display: inline-flex;
+  margin-top: 6px;
+  padding: 4px 8px;
+  border-radius: 9999px;
+  background: #2563eb;
+  color: white;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contador-novedades {
+  margin: 16px 0 12px;
+  font-weight: 600;
+  color: #111827;
+}

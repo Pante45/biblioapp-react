@@ -35,7 +35,12 @@ function App() {
           onSearchChange={setSearchTitle}
         />
         {filteredBooks.length > 0 ? (
-          <ListaLibros books={filteredBooks} />
+          <>
+            <div className="contador-novedades">
+              {filteredBooks.filter((book) => book.esNovedad).length} libros novedad
+            </div>
+            <ListaLibros books={filteredBooks} />
+          </>
         ) : (
           <p>No hay libros que coincidan</p>
         )}

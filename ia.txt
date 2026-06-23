@@ -19,4 +19,10 @@ Utilidad: Eficiente y buena
 Etapa 4
 -En esta etapa le pedi a la ia que agregara los botnes o un selector para poder filtrar los libros por el estado.
 promps:En FiltroEstado.jsx crea botones o un selector para poder filtrar por el estado, "Todos", "Disponible", "Prestado", "Reservado".
-Resultado:  
+Resultado:Creo con facilidad un filtrado para buscar los libros.   
+Utilidad: Lo hizo rapida sin problemas
+Etapa 5
+-En esta etapa con ayuda de la ia pude agregar un esNovedad al proyecto.
+promps:Ahora quisiera resaltar visualmente los elementos esNovedad: true coloca una etiqueta o un borde distinto.
+Resultado: Logro hacerlo, ya que se ve cuales son la novedad en libros. 
+Utilidad: cumplio las cosas que le pedi
