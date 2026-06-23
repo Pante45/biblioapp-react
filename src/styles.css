@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f9fafb;
+  color: #111827;
+}
+
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+header h1 {
+  margin-bottom: 8px;
+}
