@@ -1,0 +1,15 @@
+Etapa 1 
+Le pedi a la ia la base del proyecto react y yo agregue src/data/libros.js
+Resultado: Creo la base del proyecto sin problemas en el visual.
+Utilidad: Muy buena y rapida.
+
+Etapa 2:
+Le pedi que muestre la informacion de forma visual y ordenada mostrando un color segun el estado de la etiqueta.
+Resultado: Creo de forma visual y ordenada los libros en mi proyecto, agregando tambien el color segun el estado del libro agregando los tipos de props con proptypes para evitar errores.
+Utilidad: No tuvo problema en hacerlo y agrego una buena forma visual al proyecto.
+
+Etapa 3
+Yo cree en la carpeta el archivo ListaLibros.jsx y le pedi a la ia que reciba el array de los libros y que renderize la lista de libros pasandole los datos importados.
+Resultado: Hizo el array correspondiende con el .map, renderizando tambien un libro de LibroCard.
+Utilidad: Eficiente y buena
+
